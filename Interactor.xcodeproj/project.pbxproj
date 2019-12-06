@@ -10,6 +10,8 @@
 		E96575E9239A93880061C081 /* Interactor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E96575DF239A93880061C081 /* Interactor.framework */; };
 		E96575EE239A93880061C081 /* InteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96575ED239A93880061C081 /* InteractorTests.swift */; };
 		E96575F0239A93880061C081 /* Interactor.h in Headers */ = {isa = PBXBuildFile; fileRef = E96575E2239A93880061C081 /* Interactor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E96575FA239A93B20061C081 /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96575F9239A93B20061C081 /* Interactor.swift */; };
+		E9657609239A9C5B0061C081 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9657608239A9C5B0061C081 /* Models.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +31,8 @@
 		E96575E8239A93880061C081 /* InteractorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InteractorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E96575ED239A93880061C081 /* InteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractorTests.swift; sourceTree = "<group>"; };
 		E96575EF239A93880061C081 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E96575F9239A93B20061C081 /* Interactor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Interactor.swift; sourceTree = "<group>"; };
+		E9657608239A9C5B0061C081 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +57,7 @@
 		E96575D5239A93880061C081 = {
 			isa = PBXGroup;
 			children = (
+				E965760A239A9C610061C081 /* Models */,
 				E96575E1239A93880061C081 /* Interactor */,
 				E96575EC239A93880061C081 /* InteractorTests */,
 				E96575E0239A93880061C081 /* Products */,
@@ -71,6 +76,7 @@
 		E96575E1239A93880061C081 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
+				E96575F9239A93B20061C081 /* Interactor.swift */,
 				E96575E2239A93880061C081 /* Interactor.h */,
 				E96575E3239A93880061C081 /* Info.plist */,
 			);
@@ -84,6 +90,14 @@
 				E96575EF239A93880061C081 /* Info.plist */,
 			);
 			path = InteractorTests;
+			sourceTree = "<group>";
+		};
+		E965760A239A9C610061C081 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E9657608239A9C5B0061C081 /* Models.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,6 +162,7 @@
 				TargetAttributes = {
 					E96575DE239A93880061C081 = {
 						CreatedOnToolsVersion = 11.1;
+						LastSwiftMigration = 1110;
 					};
 					E96575E7239A93880061C081 = {
 						CreatedOnToolsVersion = 11.1;
@@ -195,6 +210,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E96575FA239A93B20061C081 /* Interactor.swift in Sources */,
+				E9657609239A9C5B0061C081 /* Models.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,6 +357,7 @@
 		E96575F4239A93880061C081 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 82A5QR42VN;
@@ -356,6 +374,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = kikokiko.Interactor;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -364,6 +383,7 @@
 		E96575F5239A93880061C081 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 82A5QR42VN;
@@ -388,6 +408,7 @@
 		E96575F7239A93880061C081 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 82A5QR42VN;
 				INFOPLIST_FILE = InteractorTests/Info.plist;
@@ -406,6 +427,7 @@
 		E96575F8239A93880061C081 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 82A5QR42VN;
 				INFOPLIST_FILE = InteractorTests/Info.plist;
