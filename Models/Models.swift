@@ -9,7 +9,7 @@
 import Foundation
 
 public struct ShowBalance {
-    
+    // models
     public struct Request {
         public let id: Int
         public init(id: Int) {
