@@ -11,24 +11,34 @@ import XCTest
 
 class InteractorTests: XCTestCase {
 
-    override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    func test() {
+        XCTAssertNotNil(Interactor())
     }
-
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    
+    func test_showBalance() {
+        // Given
+        let sut = Interactor()
+        let worker = WorkerSpy()
+        sut.worker = worker
+        
+        // When
+        sut.showBalance(request: ShowBalance.Request(id: 0))
+        
+        // Then
+        XCTAssertEqual(worker.numberOfCalls, 1)
+        
     }
-
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    
+    
+    class WorkerSpy: InteractorWorker {
+        var numberOfCalls = 0
+        func getBalance(completion: @escaping (Result<Double, Error>) -> ()) {
+            numberOfCalls += 1
         }
+        
+        
     }
+    
+    
 
 }
